@@ -1,0 +1,110 @@
+/* Add fonts */
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+
+/* All class using same dataset */
+:root {
+    /* Define Variable */
+    --accent : #FFEC8A; /* Button color from figma */
+    --accentHover : #06005c; /* Mouse Hover */ 
+    --dark60 : rgb(255, 255, 255);
+    --light : #ffffff;
+    --transition : all 0.3s ease 0s
+}
+
+/* All Section */
+*{
+    /* Clear margin and padding */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,body {
+    height: 100%;
+    overflow: auto;
+}
+
+body {
+    /* background: linear-gradient(
+        var(--dark60), var(--dark60)
+    ), 
+    url(./img/IMG_2186\ 1.svg ); */
+    background-image: url(./img/IMG_2186\ 1.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+a, button, p{
+    font-family: 'Dosis', sans-serif;
+    color: var(--light);
+}
+
+a, button, .logo{
+    cursor: pointer;
+}
+
+main{
+    height: 100;
+    display: grid;
+    grid-template-columns: minmax(60px, 1fr) repeat(6, minmax(50px, 190px))
+    minmax(60px, 1fr);
+}
+
+header{
+    grid-column: 2 / span 6;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    height: 150px;
+}
+
+.links{
+    margin-left: auto;
+}
+
+.links a, .links button{
+    font-size: 1.5rem;
+    font-weight: 400;
+    transition: var(--transition);
+}
+
+.links a:hover{
+    color: var(--accentHover);
+}
+
+.button_1{
+    border: none;
+    background-color: var(--accent);
+    padding: 8px 25px;
+    transition: var(--transition);
+}
+
+.button_1:hover{
+    color: var(--accentHover);
+}
+
+.info{
+    grid-column: 3 / span 4;
+    margin-top: 23%;
+    text-align: center;
+}
+
+.content_font1{
+    font-family: 'Dosis', sans-serif;
+    color: black;
+    font-size: 3.5rem;
+}
+
+.content_font2{
+    font-family: 'Dosis', sans-serif;
+    color: var(--light);
+    font-size: 1.5rem;
+}
+
+.icons{
+    margin-top: 10%;
+    display: flex;
+}
