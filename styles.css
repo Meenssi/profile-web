@@ -1,11 +1,11 @@
 /* Add fonts */
-@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa:wght@600&family=Dosis&family=Inter:wght@500&display=swap');
 
 /* All class using same dataset */
 :root {
     /* Define Variable */
     --accent : #FFEC8A; /* Button color from figma */
-    --accentHover : #06005c; /* Mouse Hover */ 
+    --accentHover : #000000; /* Mouse Hover */ 
     --dark60 : rgb(255, 255, 255);
     --light : #ffffff;
     --transition : all 0.3s ease 0s
@@ -36,7 +36,7 @@ body {
 }
 
 a, button, p{
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Inter', sans-serif;
     color: var(--light);
 }
 
@@ -52,13 +52,20 @@ main{
 }
 
 header{
-    grid-column: 2 / span 6;
+    grid-column: 1 / span 8;
+    background-color: #6883b9be;
+    height: 100px;
+    padding: 1em;
 }
 
 nav{
     display: flex;
     align-items: center;
-    height: 150px;
+    height: 70px;
+}
+
+.logo{
+    margin-left: 30px;
 }
 
 .links{
@@ -69,6 +76,7 @@ nav{
     font-size: 1.5rem;
     font-weight: 400;
     transition: var(--transition);
+    margin-right: 30px;
 }
 
 .links a:hover{
@@ -77,13 +85,14 @@ nav{
 
 .button_1{
     border: none;
+    color: #000000;
     background-color: var(--accent);
     padding: 8px 25px;
     transition: var(--transition);
 }
 
 .button_1:hover{
-    color: var(--accentHover);
+    color: var(--light);
 }
 
 .info{
@@ -93,18 +102,111 @@ nav{
 }
 
 .content_font1{
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Inter', sans-serif;
     color: black;
     font-size: 3.5rem;
 }
 
 .content_font2{
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Inter', sans-serif;
     color: var(--light);
     font-size: 1.5rem;
 }
 
 .icons{
-    margin-top: 10%;
+    margin-top: 15%;
     display: flex;
+}
+
+.icon{
+    margin-right: 130px;
+}
+
+.icon img{
+    width: 60px;
+    height: 60px;
+}
+
+.icon_info{
+    text-align: center;
+}
+
+.features{
+    grid-column: 2 /span 7;
+    background-color: #b4edfa9f;
+    margin-top: 15%;
+    padding: 20px 0px 0px 20px;
+    display: flex;
+    align-items: left;
+}
+
+.feature{
+    display: flex;
+    margin: 0px 10px 20px 10px;
+}
+
+.feature img{
+    width: 150px;
+    height: 100px;
+    margin-right: 20px;
+}
+.feature_info p{
+    color: #000000;
+}
+
+.feature_top, .feature_more{
+    font-size: 20px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    margin-right: 20px;
+}
+
+.feature_bottom{
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.feature:nth-child(3){
+    align-self: flex-start;
+}
+
+.feature_more{
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.feature_more:hover{
+    color: var(--light);
+}
+
+@media only screen and (max-width:1100px){
+    .icon img{
+        height: 100px;
+        width: auto;
+        grid-column: 4 ;
+    }
+    .feature{
+        grid-column: 1 / span 7;
+    }
+}
+
+@media only screen and (max-width:850px){
+    .info{
+        grid-column: 2 / span 6;
+    }
+    .icons{
+        flex-direction: column;
+    }
+    .icon{
+        margin-top: 20px;
+    }
+    .content_font1, .content_font2{
+        font-size: 1.75rem;
+    }
+    .features{
+        flex-direction: column;
+    }
+    .logo{
+        margin-right: 10px;
+    }
 }
